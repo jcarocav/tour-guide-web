@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel — Guía Patagónico | Punta Arenas</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+<div class="bg-layer"></div>
+ 
+<!-- BOTÓN WA FLOTANTE -->
+<a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20reservar%20un%20tour" target="_blank"
+   class="wa-float" id="waFloat" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+ 
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo">Daniel <em>Guía</em> Patagónico</div>
+  <ul class="nav-links">
+    <li><a href="#tours">Tours</a></li>
+    <li><a href="#cuando">Cuándo ir</a></li>
+    <li><a href="#fauna">Fauna</a></li>
+    <li><a href="#llegar">Cómo llegar</a></li>
+    <li><a href="#confianza">Confianza</a></li>
+    <li><a href="#reserva" class="btn-nav">Reservar</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+ 
+<!-- MENÚ MÓVIL -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <ul>
+    <li><a href="#tours" onclick="closeMenu()">Tours</a></li>
+    <li><a href="#cuando" onclick="closeMenu()">Cuándo ir</a></li>
+    <li><a href="#fauna" onclick="closeMenu()">Flora & Fauna</a></li>
+    <li><a href="#llegar" onclick="closeMenu()">Cómo llegar</a></li>
+    <li><a href="#itinerarios" onclick="closeMenu()">Itinerarios</a></li>
+    <li><a href="#confianza" onclick="closeMenu()">Por qué elegirme</a></li>
+    <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
+    <li><a href="#reserva" onclick="closeMenu()">📲 Reservar ahora</a></li>
+  </ul>
+</div>
+ 
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <p class="hero-tagline">Punta Arenas · Región de Magallanes · Chile</p>
+  <h1>La Patagonia<br><em>auténtica</em> te espera</h1>
+  <p class="hero-sub">Tours de aventura, historia y naturaleza guiados por un experto local certificado. Experiencias únicas, personalizadas y fuera de los paquetes genéricos.</p>
+  <div class="hero-ctas">
+    <a href="#reserva" class="btn-primary">
+      <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      Reservar por WhatsApp
+    </a>
+    <a href="#tours" class="btn-ghost">Ver todos los tours →</a>
+  </div>
+  <div class="hero-badges">
+    <div class="hbadge"><strong>★★★★★</strong>TripAdvisor</div>
+    <div class="hbadge"><strong>10+</strong>Destinos</div>
+    <div class="hbadge"><strong>2–25</strong>Personas</div>
+    <div class="hbadge"><strong>100%</strong>Personalizado</div>
+    <div class="hbadge"><strong>Certificado</strong>Guía Oficial</div>
+  </div>
+</section>
+ 
+<!-- TOURS -->
+<div class="tours-header" id="tours">
+  <p class="stag">Experiencias disponibles</p>
+  <h2 class="stitle">Todos los <em>tours</em></h2>
+  <p class="sdesc" style="margin-bottom:0">Haz click en cualquier tour para ver su itinerario completo, precio y reserva.</p>
+</div>
+ 
+<div class="tours-grid">
+ 
+  <a class="tour-card" href="#iti-city" onclick="activateIti('city',event)">
+    <div class="tour-card-bg" style="background-image:url('https://images.unsplash.com/photo-1548848221-0c2e497ed557?w=800&auto=format&fit=crop&q=80')"></div>
+    <div class="tour-card-overlay"></div>
+    <div class="tour-card-body">
+      <span class="tour-badge">⭐ Tour Estrella</span><span class="tour-dif">Nivel: Bajo</span>
+      <h3>City Tour Personalizado</h3>
+      <p>Historia, arquitectura y cultura de Punta Arenas con fechas especiales del año.</p>
+      <div class="tour-meta-row"><span class="tmeta">🕘 9:00–14:00</span><span class="tmeta">🚐 A domicilio</span></div>
+      <div class="tour-cta-hint">Ver itinerario y precio →</div>
+    </div>
+  </a>
+ 
+  <a class="tour-card" href="#iti-fuego" onclick="activateIti('fuego',event)">
+    <div class="tour-card-bg" style="background-image:url('https://images.unsplash.com/photo-1716562546737-ad9fb3e68df6?w=800&auto=format&fit=crop&q=80')"></div>
+    <div class="tour-card-overlay"></div>
+    <div class="tour-card-body">
+      <span class="tour-badge">⭐ Tour Estrella</span><span class="tour-dif">Nivel: Medio</span>
+      <h3>Tierra del Fuego Fullday</h3>
+      <p>Pingüineras, Bahía Inútil y almuerzo local. El tour más épico de la región.</p>
+      <div class="tour-meta-row"><span class="tmeta">🕖 7:00–20:00</span><span class="tmeta">Full Day</span></div>
+      <div class="tour-cta-hint">Ver itinerario y precio →</div>
+    </div>
+  </a>
+ 
+  <a class="tour-card" href="#iti-fuerte" onclick="activateIti('fuerte',event)">
+    <div class="tour-card-bg" style="background-image:url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=800&auto=format&fit=crop&q=80')"></div>
+    <div class="tour-card-overlay"></div>
+    <div class="tour-card-body">
+      <span class="tour-dif">Nivel: Bajo</span>
+      <h3>Fuerte Bulnes</h3>
+      <p>El primer asentamiento chileno del Estrecho de Magallanes. Historia del siglo XIX.</p>
+      <div class="tour-meta-row"><span class="tmeta">🏛 Histórico</span><span class="tmeta">🚐 A domicilio</span></div>
+      <div class="tour-cta-hint">Ver itinerario y precio →</div>
+    </div>
+  </a>
+ 
+  <a class="tour-card" href="#iti-reserva-mag" onclick="activateIti('reserva-mag',event)">
+    <div class="tour-card-bg" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop&q=80')"></div>
+    <div class="tour-card-overlay"></div>
+    <div class="tour-card-body">
+      <span class="tour-dif">Nivel: Medio</span>
+      <h3>Reserva Magallanes</h3>
+      <p>Bosques de lenga con panorama del Estrecho. Naturaleza virgen a 15 min del centro.</p>
+      <div class="tour-meta-row"><span class="tmeta">🌿 Naturaleza</span><span class="tmeta">🚐 A domicilio</span></div>
+      <div class="tour-cta-hint">Ver itinerario y precio →</div>
+    </div>
+  </a>
+ 
+  <a class="tour-card" href="#iti-magdalena" onclick="activateIti('magdalena',event)">
+    <div class="tour-card-bg" style="background-image:url('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&auto=format&fit=crop&q=80')"></div>
+    <div class="tour-card-overlay"></div>
+    <div class="tour-card-body">
+      <span class="tour-dif">Nivel: Bajo</span>
+      <h3>Isla Magdalena</h3>
+      <p>La mayor colonia de pingüinos de Magallanes. Tour marítimo coordinado.</p>
+      <div class="tour-meta-row"><span class="tmeta">🐧 Wildlife</span><span class="tmeta">Reserva anticipada</span></div>
+      <div class="tour-cta-hint">Ver itinerario y precio →</div>
+    </div>
+  </a>
+ 
+  <a class="tour-card" href="#iti-rey" onclick="activateIti('rey',event)">
+    <div class="tour-card-bg" style="background-image:url('https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=800&auto=format&fit=crop&q=80')"></div>
+    <div class="tour-card-overlay"></div>
+    <div class="tour-card-body">
+      <span class="tour-dif">Nivel: Bajo</span>
+      <h3>Pingüino Rey</h3>
+      <p>La colonia más austral del mundo. Un espectáculo que pocos viajeros presencian.</p>
+      <div class="tour-meta-row"><span class="tmeta">👑 Wildlife</span><span class="tmeta">Reserva anticipada</span></div>
+      <div class="tour-cta-hint">Ver itinerario y precio →</div>
+    </div>
+  </a>
+ 
+  <a class="tour-card" href="#iti-faro" onclick="activateIti('faro',event)">
+    <div class="tour-card-bg" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80')"></div>
+    <div class="tour-card-overlay"></div>
+    <div class="tour-card-body">
+      <span class="tour-dif">Nivel: Bajo</span>
+      <h3>Faro San Isidro</h3>
+      <p>Uno de los faros más remotos del mundo. Paisajes únicos en la Ruta Y-71.</p>
+      <div class="tour-meta-row"><span class="tmeta">🗺 Aventura</span><span class="tmeta">🚐 A domicilio</span></div>
+      <div class="tour-cta-hint">Ver itinerario y precio →</div>
+    </div>
+  </a>
+ 
+  <a class="tour-card" href="#iti-pali" onclick="activateIti('pali',event)">
+    <div class="tour-card-bg" style="background-image:url('https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?w=800&auto=format&fit=crop&q=80')"></div>
+    <div class="tour-card-overlay"></div>
+    <div class="tour-card-body">
+      <span class="tour-dif">Nivel: Medio</span>
+      <h3>Cueva Pali Aike</h3>
+      <p>Los primeros rastros humanos en Patagonia. Sitio arqueológico de fama mundial.</p>
+      <div class="tour-meta-row"><span class="tmeta">🏺 Arqueológico</span><span class="tmeta">Reserva anticipada</span></div>
+      <div class="tour-cta-hint">Ver itinerario y precio →</div>
+    </div>
+  </a>
+ 
+  <a class="tour-card" href="#iti-ballenas" onclick="activateIti('ballenas',event)">
+    <div class="tour-card-bg" style="background-image:url('https://images.unsplash.com/photo-1578894382853-25e7b2f08fb8?w=800&auto=format&fit=crop&q=80')"></div>
+    <div class="tour-card-overlay"></div>
+    <div class="tour-card-body">
+      <span class="tour-dif">Nivel: Bajo</span>
+      <h3>Avistamiento de Ballenas</h3>
+      <p>Jorobadas en el Estrecho de Magallanes. Una experiencia marina irrepetible.</p>
+      <div class="tour-meta-row"><span class="tmeta">🐋 Marino</span><span class="tmeta">Reserva anticipada</span></div>
+      <div class="tour-cta-hint">Ver itinerario y precio →</div>
+    </div>
+  </a>
+ 
+</div>
+ 
+<!-- GALERÍA -->
+<section class="section glass-bg" id="galeria">
+  <p class="stag">Fotos reales de los tours</p>
+  <h2 class="stitle">La Patagonia a través<br>de mi <em>lente</em></h2>
+  <p class="sdesc">Todas las fotos son propias, tomadas durante tours reales. Lo que ves es exactamente lo que vas a vivir.</p>
+  <div class="gallery-grid">
+    <div class="gal-item grande">
+      <div class="gal-item-bg" style="background-image:url('https://images.unsplash.com/photo-1639493153543-6db39efad5e1?w=900&auto=format&fit=crop&q=80');min-height:440px"></div>
+      <div class="gal-overlay"><span class="gal-caption">Estrecho de Magallanes</span></div>
+    </div>
+    <div class="gal-item" style="min-height:100px">
+      <div class="gal-item-bg" style="background-image:url('https://images.unsplash.com/photo-1716562546737-ad9fb3e68df6?w=600&auto=format&fit=crop&q=80')"></div>
+      <div class="gal-overlay"><span class="gal-caption">Tierra del Fuego</span></div>
+    </div>
+    <div class="gal-item">
+      <div class="gal-item-bg" style="background-image:url('https://images.unsplash.com/photo-1548848221-0c2e497ed557?w=600&auto=format&fit=crop&q=80')"></div>
+      <div class="gal-overlay"><span class="gal-caption">Punta Arenas</span></div>
+    </div>
+    <div class="gal-item">
+      <div class="gal-item-bg" style="background-image:url('https://images.unsplash.com/photo-1601789569087-fc48c3afe6fc?w=600&auto=format&fit=crop&q=80')"></div>
+      <div class="gal-overlay"><span class="gal-caption">Patagonia austral</span></div>
+    </div>
+    <div class="gal-item">
+      <div class="gal-item-bg" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&auto=format&fit=crop&q=80')"></div>
+      <div class="gal-overlay"><span class="gal-caption">Reserva Magallanes</span></div>
+    </div>
+  </div>
+  <p style="font-size:.72rem;color:rgba(240,235,225,.28);margin-top:.8rem;letter-spacing:.06em;text-transform:uppercase">↑ Reemplazar con fotos reales de Daniel</p>
+</section>
+ 
+<!-- CUÁNDO IR -->
+<section class="section dark" id="cuando">
+  <p class="stag">Planifica tu viaje</p>
+  <h2 class="stitle">¿Cuándo es el mejor<br>momento para <em>venir</em>?</h2>
+  <p class="sdesc">Punta Arenas tiene algo especial en cada estación. Saber cuándo venir cambia toda la experiencia.</p>
+  <div class="seasons-grid">
+    <div class="season-card glass-card" style="background:rgba(255,255,255,.05)">
+      <div class="season-icon">☀️</div>
+      <h3>Dic – Feb</h3>
+      <p>Temporada alta. Días de hasta 18 hrs de luz, pingüinos en crianza, clima más cálido (8–15°C).</p>
+      <p class="season-best" style="color:var(--acento-cl)">✓ Pingüinos, ballenas, fulldays</p>
+    </div>
+    <div class="season-card glass-card" style="background:rgba(255,255,255,.05)">
+      <div class="season-icon">🍂</div>
+      <h3>Mar – May</h3>
+      <p>Bosques de lenga en rojos y dorados. Menos turistas, precios bajos, colores espectaculares.</p>
+      <p class="season-best" style="color:var(--glaciar-cl)">✓ Naturaleza, fotografía</p>
+    </div>
+    <div class="season-card glass-card" style="background:rgba(255,255,255,.05)">
+      <div class="season-icon">❄️</div>
+      <h3>Jun – Ago</h3>
+      <p>Invierno austral. Paisajes nevados únicos, pocos turistas. Ciudad con encanto especial.</p>
+      <p class="season-best" style="color:rgba(200,200,255,.7)">✓ City tour, historia</p>
+    </div>
+    <div class="season-card glass-card" style="background:rgba(255,255,255,.05)">
+      <div class="season-icon">🌱</div>
+      <h3>Sep – Nov</h3>
+      <p>Primavera. Los pingüinos vuelven, flores silvestres y clima progresivamente mejor.</p>
+      <p class="season-best" style="color:rgba(140,200,140,.8)">✓ Fauna, aventura, tours completos</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- FAUNA -->
+<section class="section azul" id="fauna">
+  <p class="stag">Naturaleza viva</p>
+  <h2 class="stitle">Flora & <em>Fauna</em> de Magallanes</h2>
+  <p class="sdesc">Lo que hace única a la Patagonia no son solo los paisajes — es la vida silvestre que los habita.</p>
+  <div class="fauna-strip">
+    <div class="fauna-card glass-card" style="flex:0 0 180px">
+      <div class="fauna-card-bg" style="background-image:url('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&auto=format&fit=crop&q=80')"></div>
+      <div class="fauna-overlay"></div>
+      <div class="fauna-label">Pingüino de Magallanes<span class="fauna-sub">Spheniscus magellanicus</span></div>
+    </div>
+    <div class="fauna-card glass-card" style="flex:0 0 180px">
+      <div class="fauna-card-bg" style="background-image:url('https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=500&auto=format&fit=crop&q=80')"></div>
+      <div class="fauna-overlay"></div>
+      <div class="fauna-label">Pingüino Rey<span class="fauna-sub">Aptenodytes patagonicus</span></div>
+    </div>
+    <div class="fauna-card glass-card" style="flex:0 0 180px">
+      <div class="fauna-card-bg" style="background-image:url('https://images.unsplash.com/photo-1611689102192-1f6e0e52df0a?w=500&auto=format&fit=crop&q=80')"></div>
+      <div class="fauna-overlay"></div>
+      <div class="fauna-label">Cóndor Andino<span class="fauna-sub">Vultur gryphus</span></div>
+    </div>
+    <div class="fauna-card glass-card" style="flex:0 0 180px">
+      <div class="fauna-card-bg" style="background-image:url('https://images.unsplash.com/photo-1578894382853-25e7b2f08fb8?w=500&auto=format&fit=crop&q=80')"></div>
+      <div class="fauna-overlay"></div>
+      <div class="fauna-label">Ballena Jorobada<span class="fauna-sub">Megaptera novaeangliae</span></div>
+    </div>
+    <div class="fauna-card glass-card" style="flex:0 0 180px">
+      <div class="fauna-card-bg" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&auto=format&fit=crop&q=80')"></div>
+      <div class="fauna-overlay"></div>
+      <div class="fauna-label">Lenga<span class="fauna-sub">Nothofagus pumilio</span></div>
+    </div>
+    <div class="fauna-card glass-card" style="flex:0 0 180px">
+      <div class="fauna-card-bg" style="background-image:url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=500&auto=format&fit=crop&q=80')"></div>
+      <div class="fauna-overlay"></div>
+      <div class="fauna-label">Zorro Culpeo<span class="fauna-sub">Lycalopex culpaeus</span></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CÓMO LLEGAR -->
+<section class="section terra" id="llegar">
+  <p class="stag">Planifica tu llegada</p>
+  <h2 class="stitle">¿Cómo llegar a <em>Punta Arenas</em>?</h2>
+  <p class="sdesc">Punta Arenas queda en el extremo sur del mundo, pero llegar es más sencillo de lo que parece.</p>
+  <div class="llegar-grid">
+    <div class="llegar-card glass-card" style="background:rgba(255,255,255,.04)">
+      <div class="llegar-num">01</div>
+      <h3>✈️ En avión desde Santiago</h3>
+      <p>LATAM y Sky tienen vuelos directos diarios desde Santiago (SCL) al Aeropuerto Carlos Ibáñez (PUQ). Vuelo de aprox. 3h 30min.</p>
+    </div>
+    <div class="llegar-card glass-card" style="background:rgba(255,255,255,.04)">
+      <div class="llegar-num">02</div>
+      <h3>🚢 En ferry desde Puerto Montt</h3>
+      <p>Navimag opera una ruta de 4 días por los fiordos patagónicos desde Puerto Montt hasta Puerto Natales. Una experiencia en sí misma.</p>
+    </div>
+    <div class="llegar-card glass-card" style="background:rgba(255,255,255,.04)">
+      <div class="llegar-num">03</div>
+      <h3>🚌 Desde Argentina</h3>
+      <p>Conexión en bus desde Río Gallegos en ~4 horas, cruzando el Estrecho en ferry. También hay vuelos desde Buenos Aires vía El Calafate.</p>
+    </div>
+  </div>
+  <div class="glass-card" style="margin-top:1.8rem;padding:1.3rem 1.8rem;display:flex;align-items:flex-start;gap:1.2rem;background:rgba(91,143,168,.15);border-color:rgba(91,143,168,.25)">
+    <span style="font-size:1.3rem;flex-shrink:0">💡</span>
+    <div>
+      <p style="font-size:.86rem;font-weight:500;color:var(--crema);margin-bottom:.25rem">Todos los tours incluyen recogida a domicilio desde tu hotel</p>
+      <p style="font-size:.78rem;color:rgba(240,235,225,.48);line-height:1.6">Consulta disponibilidad de traslados especiales desde el aeropuerto al reservar por WhatsApp.</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- ITINERARIOS -->
+<section class="section dark" id="itinerarios">
+  <p class="stag">Paso a paso</p>
+  <h2 class="stitle">Itinerarios, precios<br>y <em>reservas</em></h2>
+  <p class="sdesc">Haz click en cualquier tour de arriba para ir directo a su itinerario. También puedes navegar por las pestañas.</p>
+ 
+  <div class="iti-tabs" id="itiTabs">
+    <button class="iti-tab active" onclick="switchTab('city',this)">City Tour</button>
+    <button class="iti-tab" onclick="switchTab('fuego',this)">Tierra del Fuego</button>
+    <button class="iti-tab" onclick="switchTab('fuerte',this)">Fuerte Bulnes</button>
+    <button class="iti-tab" onclick="switchTab('reserva-mag',this)">Res. Magallanes</button>
+    <button class="iti-tab" onclick="switchTab('magdalena',this)">Isla Magdalena</button>
+    <button class="iti-tab" onclick="switchTab('rey',this)">Pingüino Rey</button>
+    <button class="iti-tab" onclick="switchTab('faro',this)">Faro San Isidro</button>
+    <button class="iti-tab" onclick="switchTab('pali',this)">Pali Aike</button>
+    <button class="iti-tab" onclick="switchTab('ballenas',this)">Ballenas</button>
+  </div>
+ 
+  <!-- ── CITY TOUR ── -->
+  <div class="iti-panel active" id="iti-city">
+    <div class="iti-layout">
+      <div class="iti-info">
+        <h3>City Tour Personalizado</h3>
+        <div class="iti-pills">
+          <span class="iti-pill">🕘 9:00–14:00</span>
+          <span class="iti-pill">🚐 Recogida a domicilio</span>
+          <span class="iti-pill">🟢 Nivel: Bajo</span>
+          <span class="iti-pill">👶 Todas las edades</span>
+        </div>
+        <p>Recorrido histórico y cultural por Punta Arenas, adaptado a tus intereses. Van privada desde tu alojamiento con fechas y eventos especiales según la temporada.</p>
+ 
+        <div class="precio-box">
+          <div>
+            <div class="precio-label">Precio por persona</div>
+            <div class="precio-valor">$70.000 <span>CLP</span></div>
+            <div class="precio-nota">Mín. 2 personas · Máx. 25 personas<br>Consultar tarifas grupales</div>
+          </div>
+          <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20reservar%20el%20City%20Tour%20Personalizado" target="_blank" class="btn-reservar-iti">
+            <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.48 5.48 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+            Reservar este tour
+          </a>
+        </div>
+ 
+        <div class="include-grid">
+          <div class="inc-box si"><h4>✓ Incluido</h4>
+            <div class="inc-item">Van privada con calefacción</div>
+            <div class="inc-item">Guía certificado</div>
+            <div class="inc-item">Recogida a domicilio</div>
+          </div>
+          <div class="inc-box no"><h4>✗ No incluido</h4>
+            <div class="inc-item">Entradas a museos</div>
+            <div class="inc-item">Alimentación</div>
+            <div class="inc-item">Binoculares</div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">09:00</div><div class="tl-step">Recogida en tu hotel</div><div class="tl-sub">Van privada, cómoda y calefaccionada.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">09:30</div><div class="tl-step">Plaza de Armas y centro histórico</div><div class="tl-sub">Monumento a Hernando de Magallanes, edificios patrimoniales, relatos históricos únicos.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">10:30</div><div class="tl-step">Museo Regional de Magallanes</div><div class="tl-sub">Historia patagónica desde los pueblos originarios hasta hoy.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">11:30</div><div class="tl-step">Cerro La Cruz — mirador panorámico</div><div class="tl-sub">La mejor vista sobre la ciudad y el Estrecho de Magallanes.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">12:30</div><div class="tl-step">Cementerio Municipal (opcional)</div><div class="tl-sub">Monumento Nacional, uno de los más llamativos de Sudamérica.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">14:00</div><div class="tl-step">Regreso a tu alojamiento</div><div class="tl-sub">Con recomendaciones personalizadas para el resto de tu estadía.</div></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ── TIERRA DEL FUEGO ── -->
+  <div class="iti-panel" id="iti-fuego">
+    <div class="iti-layout">
+      <div class="iti-info">
+        <h3>Tierra del Fuego Fullday</h3>
+        <div class="iti-pills">
+          <span class="iti-pill">🕖 7:00–20:00</span><span class="iti-pill">🚐 A domicilio</span>
+          <span class="iti-pill">🟡 Nivel: Medio</span><span class="iti-pill">🍽 Reserva de almuerzo incluida</span>
+        </div>
+        <p>Un día completo cruzando hacia Tierra del Fuego. Pingüineras, Bahía Inútil y gastronomía magallánica auténtica. El tour más épico de la región.</p>
+        <div class="precio-box">
+          <div>
+            <div class="precio-label">Precio por persona</div>
+            <div class="precio-valor">$95.000 <span>CLP</span></div>
+            <div class="precio-nota">Mín. 2 personas · Máx. 25 personas<br>Almuerzo a cargo del viajero</div>
+          </div>
+          <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20reservar%20el%20tour%20Tierra%20del%20Fuego%20Fullday" target="_blank" class="btn-reservar-iti">
+            <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.48 5.48 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+            Reservar este tour
+          </a>
+        </div>
+        <div class="include-grid">
+          <div class="inc-box si"><h4>✓ Incluido</h4>
+            <div class="inc-item">Traslado completo ida y vuelta</div>
+            <div class="inc-item">Reserva en restaurante local</div>
+            <div class="inc-item">Guía certificado</div>
+          </div>
+          <div class="inc-box no"><h4>✗ No incluido</h4>
+            <div class="inc-item">Costo del almuerzo</div>
+            <div class="inc-item">Entradas a parques</div>
+            <div class="inc-item">Binoculares</div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">07:00</div><div class="tl-step">Recogida a domicilio (máximo)</div><div class="tl-sub">Salida temprana para aprovechar toda la luz del día patagónico.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">09:30</div><div class="tl-step">Pingüineras en Tierra del Fuego</div><div class="tl-sub">Colonias de pingüinos de Magallanes en su hábitat natural.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">12:00</div><div class="tl-step">Almuerzo en restaurante local</div><div class="tl-sub">Gastronomía magallánica auténtica. Reserva coordinada por Daniel.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">14:00</div><div class="tl-step">Bahía Inútil y recorrido costero</div><div class="tl-sub">Paisajes únicos en el planeta con oportunidades fotográficas excepcionales.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">17:00</div><div class="tl-step">Inicio del regreso</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">20:00</div><div class="tl-step">Llegada a tu alojamiento</div></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ── FUERTE BULNES ── -->
+  <div class="iti-panel" id="iti-fuerte">
+    <div class="iti-layout">
+      <div class="iti-info">
+        <h3>Fuerte Bulnes</h3>
+        <div class="iti-pills"><span class="iti-pill">🕘 Horario flexible</span><span class="iti-pill">🚐 A domicilio</span><span class="iti-pill">🟢 Nivel: Bajo</span><span class="iti-pill">🏛 Histórico</span></div>
+        <p>El primer asentamiento chileno en el Estrecho de Magallanes, fundado en 1843. Historia en estado puro con vistas espectaculares al Estrecho.</p>
+        <div class="precio-box">
+          <div>
+            <div class="precio-label">Precio por persona</div>
+            <div class="precio-valor">$40.000 <span>CLP</span></div>
+            <div class="precio-nota">Mín. 2 personas · Máx. 25 personas</div>
+          </div>
+          <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20reservar%20el%20tour%20Fuerte%20Bulnes" target="_blank" class="btn-reservar-iti">
+            <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52 -.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5 -.669 -.51a5.48 5.48 0 00 -.57 -.01c -.198 0 -.52 .074 -.792 .372 -.272 .297 -1.04 1.016 -1.04 2.479 0 1.462 1.065 2.875 １．２１３ ３．０７４．１４９．１９８ ２．０９６ ３．２ ５．０７７ ４．４８７．７０９．３０６ １．２６２．４８９ １．６９４．６２５．７１２．２２７ １．３６．１９５ １．８７１．１１８．５７１－．０８５ １．７５８－．７１９ ２．００６－１．４１３．２４８－．６９４．２４８－１．２８９．１７３－１．４１３－．０７４－．１２４－．２７２－．１９８－．５７－．３４７z  "/></svg>
+            Reservar este tour
+          </a>
+        </div>
+        <div class="include-grid">
+          <div class="inc-box si"><h4>✓ Incluido</h4><div class="inc-item">Traslado privado</div><div class="inc-item">Guía histórico-cultural</div></div>
+          <div class="inc-box no"><h4>✗ No incluido</h4><div class="inc-item">Entrada al parque</div><div class="inc-item">Alimentación</div></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Flexible</div><div class="tl-step">Recogida a domicilio</div><div class="tl-sub">Horario a coordinar según preferencias del grupo.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">En ruta</div><div class="tl-step">Paradas panorámicas en el Estrecho</div><div class="tl-sub">Oportunidades fotográficas únicas en la carretera costera.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Llegada</div><div class="tl-step">Fuerte Bulnes y Punta Santa Ana</div><div class="tl-sub">Reconstrucción histórica del fuerte original. Relatos del Chile del siglo XIX.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Regreso</div><div class="tl-step">Vuelta a la ciudad con paradas opcionales</div></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ── RESERVA MAGALLANES ── -->
+  <div class="iti-panel" id="iti-reserva-mag">
+    <div class="iti-layout">
+      <div class="iti-info">
+        <h3>Reserva Magallanes</h3>
+        <div class="iti-pills"><span class="iti-pill">🕘 Horario flexible</span><span class="iti-pill">🚐 A domicilio</span><span class="iti-pill">🟡 Nivel: Medio</span><span class="iti-pill">🌿 Naturaleza</span></div>
+        <p>Senderos entre bosques de lenga y coigüe con panorama del Estrecho. Naturaleza a 15 minutos del centro de Punta Arenas.</p>
+        <div class="precio-box">
+          <div>
+            <div class="precio-label">Precio por persona</div>
+            <div class="precio-valor">$50.000 <span>CLP</span></div>
+            <div class="precio-nota">Mín. 2 personas · Máx. 25 personas</div>
+          </div>
+          <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20reservar%20el%20tour%20Reserva%20Magallanes" target="_blank" class="btn-reservar-iti">
+            <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52 -.075-.149 -.669-1.612 -.916-2.207 -.242 -.579 -.487 -.5 -.669 -.51a5.48 5.48 0 00 -.57 -.01c -.198 0 -.52 .074 -.792 .372 -.272 .２９７ -１．０４ １．０１６ -１．０４ ２．４７９ ０ １．４６２ １．０６５ ２．８７５ １．２１３ ３．０７４．１４９．１９８ ２．０９６ ３．２ ５．０７７ ４．４８７．７０９．３０６ １．２６２．４８９ １．６９４．６２５．７１２．２２７ １．３６．１９５ １．８７１．１１８．５７１－．０８５ １．７５８－．７１９ ２．００６－１．４１３．２４８－．６９４．２４８－１．２８９．１７３－１．４１３－．０７４－．１２４－．２７２－．１９８－．５７－．３４７z"/></svg>
+            Reservar este tour
+          </a>
+        </div>
+        <div class="include-grid">
+          <div class="inc-box si"><h4>✓ Incluido</h4><div class="inc-item">Traslado privado</div><div class="inc-item">Guía naturalista</div></div>
+          <div class="inc-box no"><h4>✗ No incluido</h4><div class="inc-item">Entrada a la reserva</div><div class="inc-item">Alimentación y bebidas</div></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Flexible</div><div class="tl-step">Recogida a domicilio</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">En ruta</div><div class="tl-step">Explicación de flora y fauna</div><div class="tl-sub">Lenga, coigüe, zorros, cóndores. Contexto ecológico del bosque austral.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Cumbre</div><div class="tl-step">Mirador panorámico 360°</div><div class="tl-sub">Vista de Punta Arenas, el Estrecho y Tierra del Fuego en días despejados.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Regreso</div><div class="tl-step">Bajada por sendero alternativo</div><div class="tl-sub">Con posibilidad de paradas para fotografía.</div></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ── ISLA MAGDALENA ── -->
+  <div class="iti-panel" id="iti-magdalena">
+    <div class="iti-layout">
+      <div class="iti-info">
+        <h3>Isla Magdalena — Pingüinos</h3>
+        <div class="iti-pills"><span class="iti-pill">🐧 Wildlife</span><span class="iti-pill">Dic–Feb</span><span class="iti-pill">🟢 Nivel: Bajo</span><span class="iti-pill">Todas las edades</span></div>
+        <p>La mayor colonia de pingüinos de Magallanes en la región. Tour marítimo coordinado con empresa logística de navegación. Se recomienda reservar con al menos 2 semanas de anticipación en temporada alta.</p>
+        <div class="precio-box">
+          <div>
+            <div class="precio-label">Precio por persona</div>
+            <div class="precio-valor">Consultar <span>precio</span></div>
+            <div class="precio-nota">Depende de la empresa logística marítima<br>Coordinar fechas disponibles</div>
+          </div>
+          <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20info%20del%20tour%20Isla%20Magdalena" target="_blank" class="btn-reservar-iti">
+            <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52 -.075-.149 -.669-1.612 -.916-2.207 -.242 -.579 -.487 -.5 -.669 -.51a5.48 5.48 0 00 -.57 -.01c -.198 0 -.52 .074 -.792 .372 -.272 .２９７ -１．０４ １．０１６ -１．０４ ２．４７９ ０ １．４６２ １．０６５ ２．８７５ １．２１３ ３．０７４．１４９．１９８ ２．０９６ ３．２ ５．０７７ ４．４８７．７０９．３０６ １．２６２．４８９ １．６９４．６２５．７１２．２２７ １．３６．１９５ １．８７１．１１８．５７１－．０８５ １．７５８－．７１９ ２．００６－１．４１３．２４８－．６９４．２４８－１．２８９．１７３－１．４１３－．０７４－．１２４－．２７２－．１９８－．５７－．３４７z"/></svg>
+            Consultar disponibilidad
+          </a>
+        </div>
+        <div class="include-grid">
+          <div class="inc-box si"><h4>✓ Incluido</h4><div class="inc-item">Coordinación logística</div><div class="inc-item">Guía certificado</div></div>
+          <div class="inc-box no"><h4>✗ No incluido</h4><div class="inc-item">Pasaje marítimo</div><div class="inc-item">Alimentación</div><div class="inc-item">Binoculares</div></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Mañana</div><div class="tl-step">Embarque en Punta Arenas</div><div class="tl-sub">Punto de salida a coordinar. Daniel te confirma el detalle.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">~1h</div><div class="tl-step">Navegación al Estrecho</div><div class="tl-sub">Paisajes del Estrecho de Magallanes desde el mar.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Llegada</div><div class="tl-step">Isla Magdalena — colonia de pingüinos</div><div class="tl-sub">Sendero demarcado entre miles de pingüinos de Magallanes.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">~1.5h</div><div class="tl-step">Tiempo en la isla</div><div class="tl-sub">Observación libre con guía. Fotografía, relatos y contexto.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Regreso</div><div class="tl-step">Navegación de vuelta a Punta Arenas</div></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ── PINGÜINO REY ── -->
+  <div class="iti-panel" id="iti-rey">
+    <div class="iti-layout">
+      <div class="iti-info">
+        <h3>Pingüino Rey</h3>
+        <div class="iti-pills"><span class="iti-pill">👑 Wildlife</span><span class="iti-pill">Full Day</span><span class="iti-pill">🟢 Nivel: Bajo</span></div>
+        <p>La colonia de pingüinos rey más austral del mundo, ubicada en Tierra del Fuego. Un espectáculo exclusivo que pocos viajeros en el mundo tienen el privilegio de presenciar.</p>
+        <div class="precio-box">
+          <div>
+            <div class="precio-label">Precio por persona</div>
+            <div class="precio-valor">Consultar <span>precio</span></div>
+            <div class="precio-nota">Requiere reserva anticipada<br>Disponibilidad limitada por temporada</div>
+          </div>
+          <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20info%20del%20tour%20Ping%C3%BCino%20Rey" target="_blank" class="btn-reservar-iti">
+            <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52 -.075-.149 -.669-1.612 -.916-2.207 -.242 -.579 -.487 -.5 -.669 -.51a5.48 5.48 0 00 -.57 -.01c -.198 0 -.52 .074 -.792 .372 -.272 .２９７ -１．０４ １．０１６ -１．０４ ２．４７９ ０ １．４６２ １．０６５ ２．８７５ １．２１３ ３．０７４．１４９．１９８ ２．０９６ ３．２ ５．０７７ ４．４８７．７０９．３０６ １．２６２．４８９ １．６９４．６２５．７１２．２２７ １．３６．１９５ １．８７１．１１８．５７１－．０８５ １．７５８－．７１９ ２．００６－１．４１３．２４８－．６９４．２４８－１．２８９．１７３－１．４１３－．０７４－．１２４－．２７２－．１９８－．５７－．３４７z"/></svg>
+            Consultar disponibilidad
+          </a>
+        </div>
+        <div class="include-grid">
+          <div class="inc-box si"><h4>✓ Incluido</h4><div class="inc-item">Traslado completo</div><div class="inc-item">Guía certificado</div></div>
+          <div class="inc-box no"><h4>✗ No incluido</h4><div class="inc-item">Entrada al parque privado</div><div class="inc-item">Alimentación</div><div class="inc-item">Binoculares</div></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">07:00</div><div class="tl-step">Recogida a domicilio</div><div class="tl-sub">Salida muy temprana por la distancia a la colonia.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">En ruta</div><div class="tl-step">Cruce a Tierra del Fuego</div><div class="tl-sub">Por el ferry Melinka o Punta Delgada.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Llegada</div><div class="tl-step">Parque con colonia de Pingüino Rey</div><div class="tl-sub">La colonia más austral del mundo. Observación con guía.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Tarde</div><div class="tl-step">Regreso a Punta Arenas</div></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ── FARO SAN ISIDRO ── -->
+  
+  <!-- FARO SAN ISIDRO -->
+  <div class="iti-panel" id="iti-faro">
+    <div class="iti-layout">
+      <div class="iti-info">
+        <h3>Faro San Isidro</h3>
+        <div class="iti-pills"><span class="iti-pill">🗺 Aventura</span><span class="iti-pill">🚐 A domicilio</span><span class="iti-pill">🟢 Nivel: Bajo</span></div>
+        <p>Uno de los faros más remotos del mundo. Paisajes únicos al final de la Ruta Y-71, con el Estrecho de Magallanes en todo su esplendor.</p>
+        <div class="precio-box">
+          <div><div class="precio-label">Precio por persona</div><div class="precio-valor">$50.000 <span>CLP</span></div><div class="precio-nota">Mín. 2 personas · Máx. 25 personas</div></div>
+          <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20reservar%20Faro%20San%20Isidro" target="_blank" class="btn-reservar-iti">&#x1F4F2; Reservar este tour</a>
+        </div>
+        <div class="include-grid">
+          <div class="inc-box si"><h4>✓ Incluido</h4><div class="inc-item">Traslado privado</div><div class="inc-item">Guía con contexto histórico</div></div>
+          <div class="inc-box no"><h4>✗ No incluido</h4><div class="inc-item">Alimentación</div><div class="inc-item">Entrada si aplica</div></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Flexible</div><div class="tl-step">Recogida a domicilio</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">En ruta</div><div class="tl-step">Ruta costera con paradas panorámicas</div><div class="tl-sub">Vistas sobre el canal Señoret y el Estrecho.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Llegada</div><div class="tl-step">Faro San Isidro</div><div class="tl-sub">Historia del faro, relatos de náufragos, fotografía única.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Regreso</div><div class="tl-step">Vuelta por ruta alternativa</div></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- PALI AIKE -->
+  <div class="iti-panel" id="iti-pali">
+    <div class="iti-layout">
+      <div class="iti-info">
+        <h3>Cueva Pali Aike</h3>
+        <div class="iti-pills"><span class="iti-pill">🏺 Arqueológico</span><span class="iti-pill">Full Day</span><span class="iti-pill">🟡 Nivel: Medio</span></div>
+        <p>Sitio arqueológico de fama mundial. Los primeros vestigios humanos en la Patagonia, con más de 11.000 años de historia en un paisaje de estepa volcánica incomparable.</p>
+        <div class="precio-box">
+          <div><div class="precio-label">Precio por persona</div><div class="precio-valor">$XX.000 <span>CLP</span></div><div class="precio-nota">Mín. 2 personas · Reserva anticipada requerida</div></div>
+          <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20reservar%20Cueva%20Pali%20Aike" target="_blank" class="btn-reservar-iti">&#x1F4F2; Reservar este tour</a>
+        </div>
+        <div class="include-grid">
+          <div class="inc-box si"><h4>✓ Incluido</h4><div class="inc-item">Traslado completo</div><div class="inc-item">Guía arqueológico-cultural</div></div>
+          <div class="inc-box no"><h4>✗ No incluido</h4><div class="inc-item">Entrada a la reserva</div><div class="inc-item">Alimentación</div></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">08:00</div><div class="tl-step">Recogida a domicilio</div><div class="tl-sub">Salida temprana — el sitio está a ~200 km.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">En ruta</div><div class="tl-step">Estepa magallánica y fauna</div><div class="tl-sub">Guanacos, ñandúes, zorros y cóndores.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Llegada</div><div class="tl-step">Parque Nacional Pali Aike</div><div class="tl-sub">Cueva con 11.000+ años de historia humana.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Tarde</div><div class="tl-step">Regreso a Punta Arenas</div></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- BALLENAS -->
+  <div class="iti-panel" id="iti-ballenas">
+    <div class="iti-layout">
+      <div class="iti-info">
+        <h3>Avistamiento de Ballenas</h3>
+        <div class="iti-pills"><span class="iti-pill">🐋 Marino</span><span class="iti-pill">🟢 Nivel: Bajo</span><span class="iti-pill">Todas las edades</span></div>
+        <p>Jorobadas y otras especies en el Estrecho de Magallanes. Tour marítimo coordinado con empresa de navegación. Una experiencia irrepetible.</p>
+        <div class="precio-box">
+          <div><div class="precio-label">Precio por persona</div><div class="precio-valor">Consultar <span>precio</span></div><div class="precio-nota">Depende de la empresa logística marítima</div></div>
+          <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20info%20del%20tour%20Ballenas" target="_blank" class="btn-reservar-iti">&#x1F4F2; Consultar disponibilidad</a>
+        </div>
+        <div class="include-grid">
+          <div class="inc-box si"><h4>✓ Incluido</h4><div class="inc-item">Coordinación logística</div><div class="inc-item">Guía certificado</div></div>
+          <div class="inc-box no"><h4>✗ No incluido</h4><div class="inc-item">Pasaje marítimo</div><div class="inc-item">Alimentación</div><div class="inc-item">Binoculares</div></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Mañana</div><div class="tl-step">Embarque en Punta Arenas</div><div class="tl-sub">Punto de salida a coordinar con Daniel.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">En mar</div><div class="tl-step">Navegación por el Estrecho</div><div class="tl-sub">Búsqueda activa de grupos de ballenas jorobadas.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Avistamiento</div><div class="tl-step">Observación de ballenas</div><div class="tl-sub">Distancia respetuosa para no perturbar los animales.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Regreso</div><div class="tl-step">Vuelta al puerto</div></div>
+      </div>
+    </div>
+  </div>
+ 
+</section>
+ 
+<!-- QUÉ TRAER -->
+<section class="section glass-bg" id="traer">
+  <p class="stag">Prepárate bien</p>
+  <h2 class="stitle">¿Qué <em>traer</em> al tour?</h2>
+  <p class="sdesc">En Patagonia el clima cambia en minutos. Estas listas te aseguran una experiencia cómoda y segura.</p>
+  <div class="traer-grid">
+    <div class="traer-card glass-card" style="background:var(--glass)">
+      <h3>🏙 City Tour (medio día)</h3>
+      <div class="traer-item"><span class="traer-icon">🧥</span>Chaqueta abrigada — el viento es impredecible incluso en verano</div>
+      <div class="traer-item"><span class="traer-icon">👟</span>Zapatos cómodos con suela antideslizante</div>
+      <div class="traer-item"><span class="traer-icon">💵</span>Efectivo CLP para artesanías y entradas</div>
+      <div class="traer-item"><span class="traer-icon">📷</span>Cámara o teléfono con batería cargada</div>
+    </div>
+    <div class="traer-card glass-card" style="background:var(--glass)">
+      <h3>🌿 Tours Full Day / Naturaleza</h3>
+      <div class="traer-item"><span class="traer-icon">🧤</span>Ropa en capas: polar + chaqueta impermeable</div>
+      <div class="traer-item"><span class="traer-icon">🥾</span>Zapatos impermeables o botas de trekking</div>
+      <div class="traer-item"><span class="traer-icon">🍱</span>Snacks y botella de agua de 1+ litro</div>
+      <div class="traer-item"><span class="traer-icon">🕶</span>Lentes de sol y bloqueador (el sur quema)</div>
+    </div>
+    <div class="traer-card glass-card" style="background:var(--glass)">
+      <h3>🐧 Tours de Fauna Silvestre</h3>
+      <div class="traer-item"><span class="traer-icon">🔭</span>Binoculares (no incluidos en el tour)</div>
+      <div class="traer-item"><span class="traer-icon">🌧</span>Capa de lluvia compacta</div>
+      <div class="traer-item"><span class="traer-icon">🔇</span>Actitud tranquila: el silencio acerca más a los animales</div>
+      <div class="traer-item"><span class="traer-icon">🩹</span>Botiquín básico personal</div>
+    </div>
+    <div class="traer-card glass-card" style="background:var(--glass)">
+      <h3>💡 Consejos esenciales</h3>
+      <div class="traer-item"><span class="traer-icon">🌬</span>"En Patagonia, si no te gusta el clima, espera 5 minutos." Siempre lleva abrigo extra.</div>
+      <div class="traer-item"><span class="traer-icon">👶</span>La mayoría de tours son aptos para niños y adultos mayores.</div>
+      <div class="traer-item"><span class="traer-icon">🚐</span>Recogida a domicilio — solo estar listo a la hora acordada.</div>
+      <div class="traer-item"><span class="traer-icon">💬</span>Dudas de último momento: escríbele a Daniel por WhatsApp.</div>
+    </div>
+  </div>
+</section>
+ 
+<!-- CONFIANZA -->
+<section class="section dark" id="confianza">
+  <p class="stag">Por qué elegirme</p>
+  <h2 class="stitle">Lo que <em>cierra</em> la reserva</h2>
+  <div class="conf-grid">
+    <div class="conf-card glass-card" style="background:rgba(255,255,255,.04)"><div class="conf-icon">🛡</div><h3>Cancela o reprograma</h3><p>Si el clima no permite el tour: reembolso completo o reprogramación sin costo. Siempre.</p></div>
+    <div class="conf-card glass-card" style="background:rgba(255,255,255,.04)"><div class="conf-icon">🏅</div><h3>Guía certificado oficialmente</h3><p>Licencia de guía oficial de Magallanes, primeros auxilios de alta montaña y habilitación Torres del Paine.</p></div>
+    <div class="conf-card glass-card" style="background:rgba(255,255,255,.04)"><div class="conf-icon">✨</div><h3>100% personalizado</h3><p>Cada tour se adapta a ti. No existe el "paquete estándar". Grupos de 2 a 25 personas.</p></div>
+    <div class="conf-card glass-card" style="background:rgba(255,255,255,.04)"><div class="conf-icon">🚐</div><h3>Recogida a domicilio</h3><p>Te busco en tu hotel. Sin puntos de encuentro desconocidos ni preocupaciones de transporte.</p></div>
+    <div class="conf-card glass-card" style="background:rgba(255,255,255,.04)"><div class="conf-icon">📸</div><h3>Fotos propias de alta calidad</h3><p>Con formación en fotografía turística. Todo lo que ves en esta web son fotos reales de los tours.</p></div>
+    <div class="conf-card glass-card" style="background:rgba(255,255,255,.04)"><div class="conf-icon">🗺</div><h3>Rutas fuera de lo común</h3><p>10+ destinos incluyendo lugares que los buses turísticos nunca visitan.</p></div>
+  </div>
+  <div class="glass-card" style="margin-top:2.5rem;padding:1.8rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.2rem;background:rgba(0,170,108,.1);border-color:rgba(0,200,130,.2)">
+    <div>
+      <div style="color:#4dda9c;font-size:1.1rem;letter-spacing:.1em;margin-bottom:.35rem">★★★★★</div>
+      <p style="font-size:.92rem;font-weight:500;color:var(--crema);margin-bottom:.2rem">Excelente calificación en TripAdvisor</p>
+      <p style="font-size:.76rem;color:rgba(240,235,225,.4)">Reseñas verificadas de viajeros reales</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:.8rem">
+      <div style="background:#00AA6C;color:white;padding:.35rem .9rem;font-size:.88rem;font-weight:700;border-radius:2px">trip</div>
+      <span style="font-size:.76rem;color:rgba(240,235,225,.48)">Busca "Daniel Guía Punta Arenas"<br>en TripAdvisor</span>
+    </div>
+  </div>
+</section>
+ 
+<!-- FAQ -->
+<section class="section glass-bg" id="faq">
+  <p class="stag">Preguntas frecuentes</p>
+  <h2 class="stitle">Todo lo que necesitas<br>saber <em>antes de reservar</em></h2>
+  <div class="faq-grid">
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">¿Qué pasa si llueve o el clima es malo? <span class="faq-arrow">+</span></div><div class="faq-a">En Patagonia el clima es parte de la aventura, pero si las condiciones hacen el tour imposible, tienes dos opciones: reembolso completo o reprogramación sin costo. Tú eliges.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">¿Cuántas personas pueden ir? <span class="faq-arrow">+</span></div><div class="faq-a">Mínimo 2 y máximo 25 personas. Si viajas solo, consulta por WhatsApp — a veces hay plazas en grupos ya formados.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">¿El seguro médico está incluido? <span class="faq-arrow">+</span></div><div class="faq-a">No. Se recomienda contratar un seguro de viaje con cobertura de aventura. Daniel cuenta con primeros auxilios de alta montaña y protocolos de emergencia.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">¿Dónde es el punto de encuentro? <span class="faq-arrow">+</span></div><div class="faq-a">¡En la puerta de tu hotel! Recogida a domicilio en todos los tours. Para tours marítimos se coordina el punto de embarque al confirmar.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">¿Son aptos para niños y adultos mayores? <span class="faq-arrow">+</span></div><div class="faq-a">La mayoría sí. Cada tour muestra su nivel de dificultad (Bajo/Medio/Alto) en las tarjetas y el itinerario. El City Tour y tours marítimos son para todas las edades.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">¿Cómo se reserva y se paga? <span class="faq-arrow">+</span></div><div class="faq-a">Todo por WhatsApp — simple y directo. Me escribes con el tour, fecha y número de personas. Coordino disponibilidad y los métodos de pago. Sin formularios complicados.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">¿En qué idiomas se dan los tours? <span class="faq-arrow">+</span></div><div class="faq-a">Principalmente en español. Para grupos angloparlantes hay disponibilidad limitada en inglés — consulta al reservar.</div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">¿Qué diferencia a Daniel de las grandes agencias? <span class="faq-arrow">+</span></div><div class="faq-a">Experiencia 100% personalizada. Con una agencia grande eres uno más. Aquí el tour se adapta a tus intereses, tu ritmo y tus preguntas. Accedes a lugares y relatos que los buses turísticos jamás te mostrarán.</div></div>
+  </div>
+</section>
+ 
+<!-- RESERVA FINAL -->
+<section class="reserva-section" id="reserva">
+  <div class="reserva-inner">
+    <p class="stag" style="justify-content:center">¿Listo para partir?</p>
+    <h2 class="stitle" style="text-align:center">Reserva tu tour <em>ahora</em></h2>
+    <p class="reserva-desc">Sin formularios, sin esperas. Escríbeme por WhatsApp y en minutos coordinamos tu experiencia en la Patagonia.</p>
+    <a href="https://wa.me/56966899024?text=Hola%20Daniel,%20quiero%20reservar%20un%20tour%20en%20Punta%20Arenas." target="_blank" class="wa-btn" id="mainWaBtn">
+      <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.48 5.48 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Escribir por WhatsApp
+    </a>
+    <div class="res-info">
+      <div class="res-info-item"><strong>+56 9 6689 9024</strong><span>WhatsApp directo</span></div>
+      <div class="res-info-item"><strong>Español / English</strong><span>Idiomas disponibles</span></div>
+      <div class="res-info-item"><strong>Respuesta rápida</strong><span>Normalmente en horas</span></div>
+    </div>
+  </div>
+</section>
+ 
+<footer>
+  <div class="footer-logo">Daniel <em>Guía</em> Patagónico</div>
+  <p>Punta Arenas, Región de Magallanes, Chile<br>Guía Turístico Oficial Certificado</p>
+  <div class="footer-social"><a href="#">Instagram</a><a href="#">TripAdvisor</a><a href="https://wa.me/56912345678" target="_blank">WhatsApp</a></div>
+  <p style="width:100%;text-align:center;color:rgba(240,235,225,.18);font-size:.68rem;margin-top:.3rem">© 2025 Daniel — Guía Patagónico. Todos los derechos reservados.</p>
+</footer>
+ 
+<script src="script.js"></script>
+</body>
+</html>
