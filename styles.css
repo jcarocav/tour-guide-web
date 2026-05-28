@@ -132,10 +132,18 @@ h2.stitle em{font-style:italic;color:var(--glaciar-cl)}
  
 /* ── TOURS GRID ── */
 .tours-header{position:relative;z-index:1;padding:5rem 5rem 2rem;background:rgba(28,32,30,0.90)}
-.tours-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;position:relative;z-index:1}
-.tour-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer;border-radius:0;
-  transition:transform .4s cubic-bezier(.25,.8,.25,1),box-shadow .4s;text-decoration:none;display:block}
-.tour-card:hover{transform:scale(1.04);z-index:2;box-shadow:0 16px 50px rgba(0,0,0,.55)}
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+    justify-content: center;
+    gap: 32px;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.tour-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer;border-radius:12px;width: 100%;box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;text-decoration:none;display:block}
+.tour-card:hover{transform:translateY(-5px);z-index:2;box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15)}
 .tour-card-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s}
 .tour-card:hover .tour-card-bg{transform:scale(1.07)}
 .tour-card-overlay{position:absolute;inset:0;
@@ -176,19 +184,113 @@ h2.stitle em{font-style:italic;color:var(--glaciar-cl)}
 .season-card p{font-size:.8rem;color:rgba(240,235,225,.52);line-height:1.7}
 .season-best{margin-top:.7rem;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
  
-/* ── FAUNA ── */
-.fauna-strip{display:flex;gap:3px;overflow-x:auto;margin-top:2.5rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.fauna-strip::-webkit-scrollbar{display:none}
-.fauna-card{flex:0 0 200px;position:relative;overflow:hidden;aspect-ratio:2/3;border-radius:2px;
-  transition:transform .4s}
-.fauna-card:hover{transform:scale(1.05);z-index:2}
-.fauna-card-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s}
-.fauna-card:hover .fauna-card-bg{transform:scale(1.1)}
-.fauna-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,24,22,.9) 0%,transparent 60%)}
-.fauna-label{position:absolute;bottom:1rem;left:1rem;font-family:'Cormorant Garamond',serif;
-  font-size:1rem;font-style:italic;color:var(--crema)}
-.fauna-sub{font-size:.66rem;font-style:normal;font-family:'Outfit',sans-serif;color:rgba(240,235,225,.5);display:block;margin-top:.1rem;letter-spacing:.05em}
- 
+/* ── EXPERTOS ── */
+.seccion-expertos {
+    padding: 5rem 2rem;
+    background-color: var(--pizarra); 
+    color: var(--crema);
+}
+
+.contenedor-titulos {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.titulo-expertos {
+    font-size: 2.8rem;
+    font-family: 'Cormorant Garamond',serif; 
+    color: var(--crema);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.resalto-azul {
+    color: var(--glaciar); 
+    font-family: 'Cormorant Garamond',serif;
+}
+
+.sub-expertos {
+    font-size: 1.2rem;
+    font-family: 'Cormorant Garamond',serif; 
+    color: var(--crema);
+    opacity: 0.8;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.expertos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+    justify-content: center;
+    gap: 32px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experto-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px; 
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.experto-card:hover {
+    transform: translateY(-5px);
+    background: var(--glass-hover);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
+}
+
+.experto-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.experto-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.experto-card:hover .experto-img-wrapper img {
+    transform: scale(1.05); 
+}
+
+.experto-info {
+    padding: 1.5rem;
+}
+
+.experto-info h3 {
+    margin: 0 0 0.4rem 0;
+    color: var(--crema);
+    font-size: 1.4rem;
+    font-family: inherit;
+}
+
+.experto-puesto {
+    color: var(--acento); 
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.experto-desc {
+    font-size: 0.95rem;
+    color: var(--crema);
+    opacity: 0.85;
+    line-height: 1.5;
+    margin: 0;
+}
+
 /* ── CÓMO LLEGAR ── */
 .llegar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
 .llegar-card{padding:1.8rem;border-top:2px solid var(--acento);transition:transform .35s,box-shadow .35s}
@@ -228,7 +330,7 @@ h2.stitle em{font-style:italic;color:var(--glaciar-cl)}
   display:inline-flex;align-items:center;gap:.55rem;
   background:var(--acento);color:var(--crema);text-decoration:none;
   padding:.8rem 1.6rem;font-size:.85rem;font-weight:500;letter-spacing:.04em;
-  border-radius:2px;transition:all .3s;border:none;cursor:pointer;font-family:'Outfit',sans-serif;
+  border-radius:6px;transition:all .35s;border:none;cursor:pointer;font-family:'Outfit',sans-serif;
   white-space:nowrap;
 }
 .btn-reservar-iti:hover{background:var(--tierra);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.3)}
