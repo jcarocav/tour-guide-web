@@ -28,3 +28,71 @@ function activateIti(id,e){
   },50);
 }
 function toggleFaq(el){el.classList.toggle('open');}
+
+// ── SLIDESHOW AUTOMÁTICO EN SECCIÓN #cuando ──
+const cuandoBgs = [
+  "img/Tierra del Fuego.png",    // Verano
+  "img/fuerte bulnes.jpeg",      // Otoño
+  "img/City tour 2.jpg",         // Invierno
+  "img/Pinguino Rey.jpeg"        // Primavera
+];
+
+(function initCuandoSlideshow() {
+  const sec = document.getElementById('cuando');
+  if (!sec) return;
+
+  let current = 0;
+
+  function changeBg() {
+    // 1. Fade out
+    sec.classList.remove('bg-visible');
+
+    setTimeout(() => {
+      // 2. Cambia imagen mientras es invisible
+      current = (current + 1) % cuandoBgs.length;
+      sec.style.setProperty('--cuando-bg', `url('${cuandoBgs[current]}')`);
+      sec.querySelector(':scope::before'); // fuerza reflow (ver nota)
+      sec.style.cssText += ''; // flush
+
+      // Aplica la imagen al ::before vía custom property
+      sec.style.setProperty('--cuando-bg', `url('${cuandoBgs[current]}')`);
+
+      // 3. Fade in
+      requestAnimationFrame(() => sec.classList.add('bg-visible'));
+    }, 1000); // espera que termine el fade out (coincide con transition: 1s)
+  }
+
+  // Imagen inicial
+  sec.style.setProperty('--cuando-bg', `url('${cuandoBgs[0]}')`);
+  requestAnimationFrame(() => sec.classList.add('bg-visible'));
+
+  setInterval(changeBg, 3000); // cambia cada 3s (1s fade + 2s visible)
+})();
+// ── SLIDESHOW AUTOMÁTICO EN SECCIÓN #confianza ──
+const confianzaBgs = [
+  "img/City tour 2.jpg",
+  "img/Tierra del Fuego.png",
+  "img/Pinguino Rey.jpeg",
+  "img/fuerte bulnes.jpeg"
+];
+
+(function initConfianzaSlideshow() {
+  const sec = document.getElementById('confianza');
+  if (!sec) return;
+
+  let current = 0;
+
+  function changeBg() {
+    sec.classList.remove('bg-visible');
+    setTimeout(() => {
+      current = (current + 1) % confianzaBgs.length;
+      sec.style.setProperty('--confianza-bg', `url('${confianzaBgs[current]}')`);
+      requestAnimationFrame(() => sec.classList.add('bg-visible'));
+    }, 1000);
+  }
+
+  sec.style.setProperty('--confianza-bg', `url('${confianzaBgs[0]}')`);
+  requestAnimationFrame(() => sec.classList.add('bg-visible'));
+
+  setInterval(changeBg, 3000);
+})();

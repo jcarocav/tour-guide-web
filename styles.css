@@ -425,6 +425,109 @@ footer a{color:var(--acento-cl);text-decoration:none}
 .footer-social a{color:rgba(240,235,225,.38);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;transition:color .3s}
 .footer-social a:hover{color:var(--acento-cl)}
  
+/* ── IMAGEN DE FONDO EN PANELES DE ITINERARIO ── */
+.iti-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.iti-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.19;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+    -webkit-mask-image: radial-gradient(
+    ellipse 85% 85% at 50% 50%,
+    black 40%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 85% 85% at 50% 50%,
+    black 40%,
+    transparent 100%
+  );
+}
+
+#iti-city::before    { background-image: url('img/City tour 2.jpg'); }
+#iti-fuego::before   { background-image: url('img/Tierra del Fuego.png'); }
+#iti-fuerte::before  { background-image: url('img/fuerte bulnes.jpeg'); }
+#iti-reserva-mag::before { background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&auto=format&fit=crop&q=80'); }
+#iti-rey::before     { background-image: url('img/Pinguino Rey.jpeg'); }
+#iti-faro::before    { background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&auto=format&fit=crop&q=80'); }
+#iti-pali::before    { background-image: url('img/City tour 2.jpg'); }
+
+.iti-layout {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* ── SLIDESHOW DE FONDO EN SECCIÓN #cuando ── */
+#cuando {
+  position: relative;
+  overflow: hidden;
+}
+
+#cuando::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--cuando-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.65;
+  transition: 1s ease;
+  z-index: 0;
+}
+
+#cuando.bg-visible::before {
+  opacity: 0.65;   /* ← sube hasta 0.22 si quieres más visible */
+}
+
+#cuando > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── SLIDESHOW DE FONDO EN SECCIÓN #confianza ── */
+#confianza {
+  position: relative;
+  overflow: hidden;
+}
+
+#confianza::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--confianza-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.65;
+  transition: opacity 1s ease;
+  z-index: 0;
+  pointer-events: none;
+
+  /* Difuminado en bordes igual que los itinerarios */
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 100%);
+}
+
+#confianza.bg-visible::before {
+  opacity: 0.65;
+}
+
+#confianza > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* ════════════════ RESPONSIVE MÓVIL ════════════════ */
 @media(max-width:768px){
   :root{--nav-h:56px}
@@ -491,3 +594,4 @@ footer a{color:var(--acento-cl);text-decoration:none}
   .seasons-grid{grid-template-columns:1fr}
   .hero h1{font-size:2.2rem}
 }
+
