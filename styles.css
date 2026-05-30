@@ -455,8 +455,6 @@ footer a{color:var(--acento-cl);text-decoration:none}
   .seasons-grid{grid-template-columns:1fr 1fr;gap:3px}
   .season-card:hover{transform:none}
  
-  .fauna-card{flex:0 0 160px}
- 
   .llegar-grid{grid-template-columns:1fr;gap:1rem}
   .llegar-card:hover{transform:none}
  
