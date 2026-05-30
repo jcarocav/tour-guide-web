@@ -10,7 +10,7 @@ ham.addEventListener('click',()=>{
 function closeMenu(){ham.classList.remove('open');ham.setAttribute('aria-expanded','false');mobileNav.classList.remove('open');mobileNav.setAttribute('aria-hidden','true');setTimeout(()=>{mobileNav.style.display='none';},300);}
 const waFloat=document.getElementById('waFloat'), reservaSection=document.getElementById('reserva');
 new IntersectionObserver(entries=>entries.forEach(e=>waFloat.classList.toggle('hidden',e.isIntersecting)),{threshold:0.15}).observe(reservaSection);
-const tabMap={'city':'City Tour','fuego':'Tierra del Fuego','fuerte':'Fuerte Bulnes','reserva-mag':'Res. Magallanes','magdalena':'Isla Magdalena','rey':'Pingüino Rey','faro':'Faro San Isidro','pali':'Pali Aike','ballenas':'Ballenas'};
+const tabMap={'city':'City Tour','fuego':'Tierra del Fuego','fuerte':'Fuerte Bulnes','reserva-mag':'Res. Magallanes','rey':'Pingüino Rey','faro':'Faro San Isidro','pali':'Pali Aike'};
 function switchTab(id,btn){
   document.querySelectorAll('.iti-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.iti-tab').forEach(t=>t.classList.remove('active'));
