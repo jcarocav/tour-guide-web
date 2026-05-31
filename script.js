@@ -70,10 +70,10 @@ const cuandoBgs = [
 })();
 // ── SLIDESHOW AUTOMÁTICO EN SECCIÓN #confianza ──
 const confianzaBgs = [
-  "img/City tour 2.jpg",
-  "img/Tierra del Fuego.png",
-  "img/Pinguino Rey.jpeg",
-  "img/fuerte bulnes.jpeg"
+  "img/Grupal-1.jpeg",
+  "img/Grupal-2.jpeg",
+  "img/Grupal-3.jpeg",
+  "img/Grupal-4.jpeg"
 ];
 
 (function initConfianzaSlideshow() {
