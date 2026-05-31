@@ -424,7 +424,32 @@ footer a{color:var(--acento-cl);text-decoration:none}
 .footer-social{display:flex;gap:.9rem}
 .footer-social a{color:rgba(240,235,225,.38);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;transition:color .3s}
 .footer-social a:hover{color:var(--acento-cl)}
- 
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo-img-footer,
+footer > .logo-img {
+  flex: 1;
+}
+
+footer > p:first-of-type {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-social {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.logo-footer {
+  height: 85px;
+  width: auto;
+}
 /* ── IMAGEN DE FONDO EN PANELES DE ITINERARIO ── */
 .iti-panel {
   position: relative;
@@ -526,6 +551,14 @@ footer a{color:var(--acento-cl);text-decoration:none}
 #confianza > * {
   position: relative;
   z-index: 1;
+}
+
+/* ── LOGO SVG ── */
+.logo-img {
+  height: 80px;       /* ← ajusta según el tamaño que quieras en el nav */
+  width: auto;
+  display: block;
+  margin-top: 1rem;
 }
 
 /* ════════════════ RESPONSIVE MÓVIL ════════════════ */
