@@ -447,9 +447,14 @@ footer > p:first-of-type {
 }
 
 .logo-footer {
-  height: 85px;
+  height: 28px;
   width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;     /* ← evita que el flex lo comprima raro */
 }
+
 /* ── IMAGEN DE FONDO EN PANELES DE ITINERARIO ── */
 .iti-panel {
   position: relative;
@@ -553,12 +558,13 @@ footer > p:first-of-type {
   z-index: 1;
 }
 
-/* ── LOGO SVG ── */
+/* ── LOGO NAV ── */
 .logo-img {
-  height: 80px;       /* ← ajusta según el tamaño que quieras en el nav */
+  height: 100px;
   width: auto;
+  max-width: 180px;   /* ← evita que se expanda en móvil */
+  object-fit: contain;
   display: block;
-  margin-top: 1rem;
 }
 
 /* ════════════════ RESPONSIVE MÓVIL ════════════════ */
@@ -593,6 +599,16 @@ footer > p:first-of-type {
  
   .llegar-grid{grid-template-columns:1fr;gap:1rem}
   .llegar-card:hover{transform:none}
+
+  .logo-img {
+    height: 55px;
+    max-width: 130px;
+  }
+
+    .logo-footer {
+    height: 24px;
+    max-width: 120px;
+  }
  
   .iti-layout{grid-template-columns:1fr;gap:2rem}
   .include-grid{grid-template-columns:1fr}
@@ -613,8 +629,20 @@ footer > p:first-of-type {
   .wa-btn{padding:.9rem 1.5rem;font-size:.86rem}
   .res-info{gap:1.2rem}
  
-  footer{padding:2rem 1.3rem;flex-direction:column;text-align:center;gap:.8rem}
-  .footer-social{justify-content:center}
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+    footer > p:first-of-type {
+    text-align: center;
+  }
  
   .glass-card:hover{transform:none;box-shadow:none}
  
