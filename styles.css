@@ -568,6 +568,31 @@ footer > p:first-of-type {
   flex-shrink: 0;
 }
 
+/* ── BOTÓN DE IDIOMA ── */
+.lang-btn {
+  background: none;
+  border: 1px solid rgba(201,169,110,0.35);
+  color: var(--acento-cl);
+  padding: .35rem .8rem;
+  border-radius: 20px;
+  font-size: .78rem;
+  cursor: pointer;
+  letter-spacing: .06em;
+  transition: background .3s, border-color .3s;
+  white-space: nowrap;
+}
+.lang-btn:hover {
+  background: rgba(201,169,110,0.1);
+  border-color: var(--acento-cl);
+}
+.lang-btn-mobile {
+  width: 100%;
+  text-align: left;
+  border-radius: 6px;
+  padding: .6rem 1rem;
+  font-size: .9rem;
+}
+
 /* ════════════════ RESPONSIVE MÓVIL ════════════════ */
 @media(max-width:768px){
   :root{--nav-h:56px}
