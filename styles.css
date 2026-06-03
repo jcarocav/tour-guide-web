@@ -447,12 +447,12 @@ footer > p:first-of-type {
 }
 
 .logo-footer {
-  height: 28px;
+  height: 65px;        /* ← ajusta el footer aquí */
   width: auto;
-  max-width: 140px;
   object-fit: contain;
   display: block;
-  flex-shrink: 0;     /* ← evita que el flex lo comprima raro */
+  flex-shrink: 0;
+  flex: 1;
 }
 
 /* ── IMAGEN DE FONDO EN PANELES DE ITINERARIO ── */
@@ -560,11 +560,12 @@ footer > p:first-of-type {
 
 /* ── LOGO NAV ── */
 .logo-img {
-  height: 100px;
+  height: 70px;        
   width: auto;
-  max-width: 180px;   /* ← evita que se expanda en móvil */
+  margin-top: 15px;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
 }
 
 /* ════════════════ RESPONSIVE MÓVIL ════════════════ */
@@ -601,12 +602,12 @@ footer > p:first-of-type {
   .llegar-card:hover{transform:none}
 
   .logo-img {
-    height: 55px;
+    height: 40px;
     max-width: 130px;
   }
 
     .logo-footer {
-    height: 24px;
+    height: 32px;
     max-width: 120px;
   }
  
