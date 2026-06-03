@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -152,7 +151,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-</head>
 <body>
  
 <div class="bg-layer"></div>
@@ -177,12 +175,18 @@
       </button>
   </li>
   <ul class="nav-links">
-    <li><a href="#tours">Tours</a></li>
-    <li><a href="#cuando">Cuándo ir</a></li>
-    <li><a href="#llegar">Cómo llegar</a></li>
-    <li><a href="#confianza">Confianza</a></li>
-    <li><a href="#reserva" class="btn-nav">Reservar</a></li>
-  </ul>
+  <li><a href="#tours">Tours</a></li>
+  <li><a href="#cuando">Cuándo ir</a></li>
+  <li><a href="#llegar">Cómo llegar</a></li>
+  <li><a href="#confianza">Confianza</a></li>
+  <li><a href="#reserva" class="btn-nav">Reservar</a></li>
+  <li>
+    <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">
+      <span class="lang-es">🌐 EN</span>
+      <span class="lang-en" style="display:none">🌐 ES</span>
+    </button>
+  </li>
+</ul>
   <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
