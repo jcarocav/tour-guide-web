@@ -123,6 +123,7 @@ const translations = {
   'Personalizado':                  'Customized',
   'Guía Oficial':                   'Official Guide',
   'Certificado':                    'Certified',
+  'Fullday':                         'Fullday',
 
   // ── URGENCIA ──
   'Temporada alta: quedan':         'High season: only',
@@ -430,12 +431,6 @@ const translations = {
   '¿Cómo se reserva y se paga? ':   'How do I book and pay? ',
   'Todo por WhatsApp — simple y directo. Me escribes con el tour, fecha y número de personas. Coordino disponibilidad y los métodos de pago. Sin formularios complicados.':
     'All via WhatsApp — simple and direct. Message me with the tour, date and number of people. I\'ll coordinate availability and payment methods. No complicated forms.',
-  '¿En qué idiomas se dan los tours? ': 'In what languages are tours given? ',
-  'Principalmente en español. Para grupos angloparlantes hay disponibilidad limitada en inglés — consulta al reservar.':
-    'Mainly in Spanish. For English-speaking groups there is limited availability in English — ask when booking.',
-  '¿Qué diferencia a Daniel de las grandes agencias? ': 'What sets Daniel apart from big agencies? ',
-  'Experiencia 100% personalizada. Con una agencia grande eres uno más. Aquí el tour se adapta a tus intereses, tu ritmo y tus preguntas. Accedes a lugares y relatos que los buses turísticos jamás te mostrarán.':
-    '100% personalized experience. With a big agency you\'re just another tourist. Here the tour adapts to your interests, your pace and your questions. You access places and stories that tourist buses will never show you.',
 
   // ── TESTIMONIOS ──
   'Viajeros que ya estuvieron aquí': 'Travelers who have been here',
